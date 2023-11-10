@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto3.C_Presentacion;
 
 namespace Proyecto3
 {
@@ -16,7 +17,7 @@ namespace Proyecto3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu_Principal());
+            Application.Run(new Fnt_Login());
         }
     }
 }
