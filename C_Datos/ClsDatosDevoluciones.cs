@@ -117,11 +117,11 @@ namespace Proyecto3.C_Datos
                     MySqlCommand obterner_total_Command = new MySqlCommand(obtenerTotalRecibo, conexion);
                     obterner_total_Command.Parameters.AddWithValue("@numerorecibo", numero_Recibo);
                     float total_Recibo = Convert.ToSingle(obterner_total_Command.ExecuteScalar());
-                    MessageBox.Show($"Total del Recibo: {total_Recibo} , PrecioUnitario: {Precio_Unitario} , SeMultiplicaPor: {p_producto.Stock_D}");
-                    MessageBox.Show($"{total_Recibo - (Precio_Unitario * Convert.ToSingle(p_producto.Stock_D))}");
+                    //MessageBox.Show($"Total del Recibo: {total_Recibo} , PrecioUnitario: {Precio_Unitario} , SeMultiplicaPor: {p_producto.Stock_D}");
+                    //MessageBox.Show($"{total_Recibo - (Precio_Unitario * Convert.ToSingle(p_producto.Stock_D))}");
 
                     double NuevoValorDetalleRecivo = total_Recibo - (Precio_Unitario * Convert.ToSingle(p_producto.Stock_D));
-                    MessageBox.Show($"{NuevoValorDetalleRecivo}");
+                    //MessageBox.Show($"{NuevoValorDetalleRecivo}");
                     //--------------------------------------------------------------------------------------------------------
                     //Actualizar el valor de la venta
                     string actualizaimporte = $"update recibo_venta set Total_Recibo = @NuevoTotal where Recibo_Venta_Numero = {numero_Recibo};";

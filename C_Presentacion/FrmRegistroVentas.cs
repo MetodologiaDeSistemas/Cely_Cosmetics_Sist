@@ -63,6 +63,7 @@ namespace Proyecto3.C_Presentacion
             {
                 Form detalle = new Frm_Devoluciones(id_recibo);
                 detalle.Show();
+                this.Close();
             }
             else
             {
@@ -80,12 +81,14 @@ namespace Proyecto3.C_Presentacion
                 DataGridViewRow selectedRow = dgvHistorialVenta.Rows[e.RowIndex];
 
                 // Accede a los valores de las celdas de esa fila
-                string recibo = selectedRow.Cells["Recibo"].Value.ToString();
+                string recibo = selectedRow.Cells["Recibo"].Value != null ? selectedRow.Cells["Recibo"].Value.ToString() : string.Empty; // o cualquier otro valor predeterminado que desees
+                //string recibo = selectedRow.Cells["Recibo"].Value.ToString() ?? null;
                 string fecha = selectedRow.Cells["Fecha"].Value.ToString();
                 string articulos = selectedRow.Cells["Articulos"].Value.ToString();
                 string total = selectedRow.Cells["Total"].Value.ToString();
                 string dni = selectedRow.Cells["DNI"].Value.ToString();
 
+                
                 if (dgvHistorialVenta.SelectedRows.Count > 0)
                 {
                     // Cambia el color del botón cuando se selecciona una fila en el DataGridView
@@ -96,7 +99,15 @@ namespace Proyecto3.C_Presentacion
                     // Restaura el color original del botón cuando no hay ninguna fila seleccionada
                     btn_Detalle.BackColor = DefaultBackColor;
                 }
-                id_recibo = Convert.ToInt32(recibo);
+                if  (recibo != string.Empty)
+                {
+                    id_recibo = Convert.ToInt32(recibo);
+                }
+                else
+                {
+                    btn_Detalle.BackColor = DefaultBackColor;
+                    MessageBox.Show($"La fila seleccionada no contiene ningun valor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
             }
         }

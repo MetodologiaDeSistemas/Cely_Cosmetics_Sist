@@ -17,7 +17,7 @@ namespace Proyecto3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmRegistroVentas());
+            Application.Run(new Fnt_Login());
         }
     }
 }

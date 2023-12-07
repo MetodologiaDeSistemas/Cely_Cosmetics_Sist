@@ -46,7 +46,7 @@
             this.checkBox1.Location = new System.Drawing.Point(329, 241);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(68, 19);
-            this.checkBox1.TabIndex = 17;
+            this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Mostrar";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -68,7 +68,7 @@
             this.button1.Location = new System.Drawing.Point(158, 313);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 35);
-            this.button1.TabIndex = 19;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -79,7 +79,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(214, 20);
-            this.txtPassword.TabIndex = 14;
+            this.txtPassword.TabIndex = 1;
             // 
             // label2
             // 
@@ -106,12 +106,13 @@
             this.txtUsuario.Location = new System.Drawing.Point(100, 184);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(214, 20);
-            this.txtUsuario.TabIndex = 20;
+            this.txtUsuario.TabIndex = 0;
             // 
             // Fnt_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(410, 450);
             this.Controls.Add(this.checkBox1);
@@ -121,7 +122,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Fnt_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

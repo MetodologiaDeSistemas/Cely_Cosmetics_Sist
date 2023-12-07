@@ -51,16 +51,24 @@ namespace Proyecto3.C_Presentacion
                 DataGridViewRow selectedRow = dgv_Detalle_Recibo.Rows[e.RowIndex];
 
                 // Accede a los valores de las celdas de esa fila
-                string codigo_Prod = selectedRow.Cells["Cod_Prod"].Value.ToString();
+                //string codigo_Prod = selectedRow.Cells["Cod_Prod"].Value.ToString();
+                string codigo_Prod = selectedRow.Cells["Cod_Prod"].Value != null ? selectedRow.Cells["Cod_Prod"].Value.ToString() : string.Empty; // o cualquier otro valor predeterminado que desees
                 string Producto = selectedRow.Cells["Producto"].Value.ToString();
                 string articulos = selectedRow.Cells["Cantidad"].Value.ToString();
                 string importe = selectedRow.Cells["Importe"].Value.ToString();
 
 
                 // Haz lo que necesites con estos valores
+                if (codigo_Prod != string.Empty)
+                {
+                    _codProd = codigo_Prod;
+                    _cantidad = Convert.ToInt32(articulos);
 
-                _codProd = codigo_Prod;
-                _cantidad = Convert.ToInt32(articulos);
+                }
+                else
+                {
+                    MessageBox.Show($"La fila seleccionada no contiene ningun valor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
         private void btn_Devolucion_Click(object sender, EventArgs e)
@@ -72,6 +80,7 @@ namespace Proyecto3.C_Presentacion
                 {
                     Form cantidad = new FrmCantidadDevolver(_codProd, _cantidad, _idRecibo);
                     cantidad.Show();
+                    this.Close();
                 }
                 else
                 {
