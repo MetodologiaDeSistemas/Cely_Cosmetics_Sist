@@ -73,7 +73,7 @@ namespace Proyecto3.C_Datos
             {
                 MySqlConnection conexion = new MySqlConnection(cadenaConexion);
                 conexion.Open();
-                string cadena = "Select * From cliente";
+                string cadena = "SELECT Cliente_DNI AS DNI,Nombre_Cli AS Nombre,Apellido_Cli AS Apellido,Direccion_Cli AS Direccion,Telefono_Cli AS Telefono,Mail_Cli AS Mail FROM celycosmetic.cliente;";
                 MySqlDataReader leer_filasSQL; //SqlDataReader <-- Lee un flujo de filas unicamente de SQL
                 DataTable tabla_SQL = new DataTable();// Creamos un objeto te tipo tabla
                 MySqlCommand comando = new MySqlCommand(cadena, conexion);

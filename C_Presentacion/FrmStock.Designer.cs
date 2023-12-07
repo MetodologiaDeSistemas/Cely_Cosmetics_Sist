@@ -44,8 +44,11 @@
             this.dgv_Stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Stock.Location = new System.Drawing.Point(156, 48);
             this.dgv_Stock.Name = "dgv_Stock";
+            this.dgv_Stock.ReadOnly = true;
+            this.dgv_Stock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Stock.Size = new System.Drawing.Size(642, 340);
             this.dgv_Stock.TabIndex = 3;
+            this.dgv_Stock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Stock_CellContentClick);
             // 
             // panel1
             // 

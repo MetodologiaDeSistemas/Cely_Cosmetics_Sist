@@ -50,5 +50,10 @@ namespace Proyecto3.C_Presentacion
             ClsLogicaClienteNuevo objProveedor = new ClsLogicaClienteNuevo();
             dgv_Stock.DataSource = objProveedor.mostrar_tabla();
         }
+
+        private void dgv_Stock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

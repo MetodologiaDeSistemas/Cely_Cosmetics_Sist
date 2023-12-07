@@ -189,7 +189,8 @@ namespace Proyecto3.C_Datos
             {
                 MySqlConnection conexion = new MySqlConnection(cadenaConexion);
                 conexion.Open();
-                string cadena = "Select * From producto";
+                string cadena = "SELECT Cod_Prod AS Codigo, Fecha_Vencimiento AS Fecha, Stock_Prod AS Stock, " +
+                    "Nom_Prod AS Producto, Precio_Unitario_Prod AS 'Precio Unitario', Categoria FROM celycosmetic.producto";
                 MySqlDataReader leer_filasSQL; //SqlDataReader <-- Lee un flujo de filas unicamente de SQL
                 DataTable tabla_SQL = new DataTable();// Creamos un objeto te tipo tabla
                 MySqlCommand comando = new MySqlCommand(cadena, conexion);

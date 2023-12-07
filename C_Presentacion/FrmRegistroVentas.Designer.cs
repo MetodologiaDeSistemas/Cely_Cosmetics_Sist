@@ -95,6 +95,7 @@
             this.dgvHistorialVenta.Size = new System.Drawing.Size(360, 280);
             this.dgvHistorialVenta.TabIndex = 6;
             this.dgvHistorialVenta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorialVenta_CellClick_1);
+            this.dgvHistorialVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorialVenta_CellContentClick);
             // 
             // FrmRegistroVentas
             // 

@@ -122,5 +122,10 @@ namespace Proyecto3.C_Presentacion
             menu.Show();
             this.Hide();
         }
+
+        private void dgvHistorialVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
