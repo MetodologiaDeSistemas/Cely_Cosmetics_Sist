@@ -64,7 +64,7 @@ namespace Proyecto3.C_Logica
             tabla = productoD.tabla_producto();
             return tabla;
         }
-
+        // Eliminar producto
         public void EliminarProducto(ClsLogicaProd p_producto)
         {
             ClsDatosProd ProductoD = new ClsDatosProd();
