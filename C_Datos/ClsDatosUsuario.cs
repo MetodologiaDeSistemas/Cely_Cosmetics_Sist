@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MySqlConnector;
 using Proyecto3.C_Logica;
 using System;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ namespace Proyecto3.C_Datos
         static string servidor = "127.0.0.1";
         static string bd = "celycosmetic";
         static string usuario = "root";
-        static string password = "Joel2021";//<--- actualizar con la contraseña de su base de datos 
+        static string password = "chino2510";//<--- actualizar con la contraseña de su base de datos 
         static string puerto = "3306";
 
         string connectionString = "server=" + servidor + ";" + "port=" + puerto + ";" + "user id=" + usuario + ";" + "password=" + password + ";" + "database=" + bd + ";";

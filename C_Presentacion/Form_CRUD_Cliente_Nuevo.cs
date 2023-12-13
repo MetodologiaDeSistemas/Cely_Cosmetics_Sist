@@ -204,7 +204,7 @@ namespace Proyecto3.C_Presentacion
 
         private void btnCancelarNuevoCliente_Click(object sender, EventArgs e)
         {
-            Form historialventa = new FrmRegistroVentas();
+            Form historialventa = new Menu_Principal();
             historialventa.Show();
             this.Hide();
         }

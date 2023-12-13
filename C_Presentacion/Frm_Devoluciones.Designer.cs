@@ -43,7 +43,7 @@
             this.lbl_Valor_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Valor_Total.Location = new System.Drawing.Point(303, 373);
             this.lbl_Valor_Total.Name = "lbl_Valor_Total";
-            this.lbl_Valor_Total.Size = new System.Drawing.Size(54, 20);
+            this.lbl_Valor_Total.Size = new System.Drawing.Size(14, 20);
             this.lbl_Valor_Total.TabIndex = 12;
             this.lbl_Valor_Total.Text = "-";
             // 
@@ -93,6 +93,7 @@
             this.dgv_Detalle_Recibo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Detalle_Recibo.Location = new System.Drawing.Point(10, 66);
             this.dgv_Detalle_Recibo.Name = "dgv_Detalle_Recibo";
+            this.dgv_Detalle_Recibo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Detalle_Recibo.Size = new System.Drawing.Size(347, 246);
             this.dgv_Detalle_Recibo.TabIndex = 7;
             this.dgv_Detalle_Recibo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Detalle_Recibo_CellClick);
@@ -109,6 +110,7 @@
             this.Controls.Add(this.lbl_titulo);
             this.Controls.Add(this.btn_Devolucion);
             this.Controls.Add(this.dgv_Detalle_Recibo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Devoluciones";
             this.Text = "Frm_Devoluciones";
             this.Load += new System.EventHandler(this.Frm_Devoluciones_Load);

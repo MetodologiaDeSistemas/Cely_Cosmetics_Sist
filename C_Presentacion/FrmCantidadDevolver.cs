@@ -39,6 +39,9 @@ namespace Proyecto3.C_Presentacion
             ClsLogicaDevoluciones empleado = new ClsLogicaDevoluciones();
             empleado.CargarMod(pasarClogica());
             pasarClogica();
+            Form registro = new Frm_Devoluciones(_id_recibo);
+            registro.Show();
+            this.Close();
         }
 
         private void FrmCantidadDevolver_Load_1(object sender, EventArgs e)
@@ -56,7 +59,7 @@ namespace Proyecto3.C_Presentacion
         {
             Form Registro = new Frm_Devoluciones(_id_recibo);
             Registro.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }
